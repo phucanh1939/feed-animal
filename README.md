@@ -1,4 +1,4 @@
-# Hello Unity
+# Feed Animals
 
 A top-down game where you need to throw food to hungry animals - who are runing towards you - before they can run past you
 
