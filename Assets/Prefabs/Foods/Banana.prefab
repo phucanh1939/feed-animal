@@ -12,12 +12,14 @@ GameObject:
   - component: {fileID: 5302673573755298289}
   - component: {fileID: 5313184291014190863}
   - component: {fileID: 6422374007308822359}
-  - component: {fileID: -3118799077162182731}
   - component: {fileID: 2865142435219957063}
   - component: {fileID: 2101528936404008812}
+  - component: {fileID: -4130915947249795980}
+  - component: {fileID: -730502364853965168}
+  - component: {fileID: -1609798784879909654}
   m_Layer: 0
   m_Name: Banana
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,20 +102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 40
---- !u!114 &-3118799077162182731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5326336408881566187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92f82d0585804f41b83de54351618941, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _top: 25
-  _bot: -100
 --- !u!54 &2865142435219957063
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -143,3 +131,43 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.50622404, y: 0.47573793, z: 0.4844519}
   m_Center: {x: 0, y: 0.009565257, z: 0.021385126}
+--- !u!114 &-4130915947249795980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5326336408881566187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73971e9bca394d99ab66062872817d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTag: Animal
+--- !u!114 &-730502364853965168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5326336408881566187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73971e9bca394d99ab66062872817d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTag: Boundary
+--- !u!114 &-1609798784879909654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5326336408881566187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b0bf6ee46874cb5b698337e6b1ef142, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTag: Animal
+  _eventToRaise: {fileID: 11400000, guid: 034e512c23a41aa4fba38a9f7fd1de40, type: 2}

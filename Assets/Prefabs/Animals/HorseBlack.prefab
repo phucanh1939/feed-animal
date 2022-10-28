@@ -1021,11 +1021,12 @@ GameObject:
   - component: {fileID: 6722384357333300028}
   - component: {fileID: 519685059108147507}
   - component: {fileID: 8611824598100212113}
-  - component: {fileID: 31144571212696933}
   - component: {fileID: 7095493641252457328}
+  - component: {fileID: 1919178103595632071}
+  - component: {fileID: 3728169225748892665}
   m_Layer: 0
   m_Name: HorseBlack
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1097,22 +1098,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 15
---- !u!114 &31144571212696933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6722384357340617000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92f82d0585804f41b83de54351618941, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _minX: -25
-  _maxX: 25
-  _minZ: -10
-  _maxZ: 20
 --- !u!114 &7095493641252457328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1125,6 +1110,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73971e9bca394d99ab66062872817d82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _targetTag: Food
+--- !u!114 &1919178103595632071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6722384357340617000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73971e9bca394d99ab66062872817d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTag: Boundary
+--- !u!114 &3728169225748892665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6722384357340617000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73971e9bca394d99ab66062872817d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTag: Player
 --- !u!1 &6722384357340623526
 GameObject:
   m_ObjectHideFlags: 0

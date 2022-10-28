@@ -5,7 +5,7 @@ using Vector3 = UnityEngine.Vector3;
 public class AnimalManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] _prefabs;
-    [SerializeField] private float _spawnInterval = 1.5f;
+    [SerializeField] private float _spawnInterval = 0.75f;
     [SerializeField] private float _spawnDelay = 2.0f;
 
     [Header("Spawn Range")]
@@ -49,7 +49,6 @@ public class AnimalManager : MonoBehaviour
 
     private void SpawnAnimals()
     {
-        SpawnAnimalTop();
         SpawnAnimalTop();
         SpawnAnimalLeft();
         SpawnAnimalRight();

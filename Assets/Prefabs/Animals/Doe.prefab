@@ -521,9 +521,10 @@ GameObject:
   - component: {fileID: 3856768315168911037}
   - component: {fileID: 3856768315158983427}
   - component: {fileID: 6570928596976398066}
-  - component: {fileID: 6957754156456526632}
   - component: {fileID: 4678780165243060664}
   - component: {fileID: 1129058577846913308}
+  - component: {fileID: 5563322380387566175}
+  - component: {fileID: 6746834293135826194}
   m_Layer: 0
   m_Name: Doe
   m_TagString: Animal
@@ -588,23 +589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9552f2b0404e1c98459667ba0b2a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 15
---- !u!114 &6957754156456526632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3856768315168622683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92f82d0585804f41b83de54351618941, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _minX: -25
-  _maxX: 25
-  _minZ: -10
-  _maxZ: 20
+  _speed: 10
 --- !u!65 &4678780165243060664
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -630,6 +615,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73971e9bca394d99ab66062872817d82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _targetTag: Food
+--- !u!114 &5563322380387566175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3856768315168622683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73971e9bca394d99ab66062872817d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTag: Boundary
+--- !u!114 &6746834293135826194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3856768315168622683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73971e9bca394d99ab66062872817d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTag: Player
 --- !u!1 &3856768315168630725
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,10 +14,12 @@ GameObject:
   - component: {fileID: -5373662049173703614}
   - component: {fileID: 8718839674840291438}
   - component: {fileID: 3428265710849149751}
-  - component: {fileID: 1090070443539841952}
+  - component: {fileID: -299114581671781438}
+  - component: {fileID: -2762612903347835854}
+  - component: {fileID: -5383667540063805154}
   m_Layer: 0
   m_Name: Pizza
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 45
---- !u!114 &1090070443539841952
+--- !u!114 &-299114581671781438
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,10 +140,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 5921267155224161099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92f82d0585804f41b83de54351618941, type: 3}
+  m_Script: {fileID: 11500000, guid: 73971e9bca394d99ab66062872817d82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minX: -25
-  _maxX: 25
-  _minZ: -10
-  _maxZ: 20
+  _targetTag: Animal
+--- !u!114 &-2762612903347835854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5921267155224161099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73971e9bca394d99ab66062872817d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTag: Boundary
+--- !u!114 &-5383667540063805154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5921267155224161099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b0bf6ee46874cb5b698337e6b1ef142, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTag: Animal
+  _eventToRaise: {fileID: 11400000, guid: 034e512c23a41aa4fba38a9f7fd1de40, type: 2}

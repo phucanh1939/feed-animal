@@ -1004,11 +1004,12 @@ GameObject:
   - component: {fileID: 1694747949578316556}
   - component: {fileID: 4747404817659183760}
   - component: {fileID: 93034300216299891}
-  - component: {fileID: 5818506602531630376}
   - component: {fileID: 722823202632591781}
+  - component: {fileID: -7702702739847894596}
+  - component: {fileID: 8662221041613652926}
   m_Layer: 0
   m_Name: CowBrown
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1074,23 +1075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9552f2b0404e1c98459667ba0b2a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 15
---- !u!114 &5818506602531630376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1694747949587549580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92f82d0585804f41b83de54351618941, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _minX: -25
-  _maxX: 25
-  _minZ: -10
-  _maxZ: 20
+  _speed: 12
 --- !u!114 &722823202632591781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1103,6 +1088,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73971e9bca394d99ab66062872817d82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _targetTag: Food
+--- !u!114 &-7702702739847894596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694747949587549580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73971e9bca394d99ab66062872817d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTag: Boundary
+--- !u!114 &8662221041613652926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694747949587549580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73971e9bca394d99ab66062872817d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTag: Player
 --- !u!1 &1694747949587550892
 GameObject:
   m_ObjectHideFlags: 0
