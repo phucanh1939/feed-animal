@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class DestroyOutOfBounds : MonoBehaviour
 {
-    [SerializeField] private float _top = 100;
-    [SerializeField] private float _bot = -100;
+    [SerializeField] private float _minX = -30.0f;
+    [SerializeField] private float _maxX = 30.0f;
+    [SerializeField] private float _minZ = -10.0f;
+    [SerializeField] private float _maxZ = 20.0f;
 
     private Transform _transform;
 
@@ -15,12 +17,8 @@ public class DestroyOutOfBounds : MonoBehaviour
     private void Update()
     {
         var position = _transform.position;
-        if (position.z < _bot || position.z > _top)
+        if (position.z < _minZ || position.z > _maxZ || position.x < _minX || position.x > _maxX)
         {
-            if (gameObject.CompareTag("Animal"))
-            {
-                Debug.Log("Game Over!");
-            }
             Destroy(gameObject);
         }
     }

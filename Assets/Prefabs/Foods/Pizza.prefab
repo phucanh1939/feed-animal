@@ -141,5 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92f82d0585804f41b83de54351618941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _top: 20
-  _bot: -100
+  _minX: -25
+  _maxX: 25
+  _minZ: -10
+  _maxZ: 20
