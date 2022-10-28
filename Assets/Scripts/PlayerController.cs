@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _maxZ = 10.0f;
 
     [Header("Events Listen to")]
-    [SerializeField] private VoidEventChannelSO _onFoodHitAnimal;
+    [SerializeField] private VoidEventChannelSO _onAnimalFull;
     [SerializeField] private VoidEventChannelSO _onAnimalHitHome;
 
     [Header("Events Raised")]
@@ -45,13 +45,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable()
     {
-        _onFoodHitAnimal.onEventRaised += OnFoodHitAnimal;
+        _onAnimalFull.onEventRaised += OnAnimalFull;
         _onAnimalHitHome.onEventRaised += OnAnimalHitHome;
     }
 
     private void OnDisable()
     {
-        _onFoodHitAnimal.onEventRaised -= OnFoodHitAnimal;
+        _onAnimalFull.onEventRaised -= OnAnimalFull;
         _onAnimalHitHome.onEventRaised -= OnAnimalHitHome;
     }
 
@@ -88,13 +88,14 @@ public class PlayerController : MonoBehaviour
         SetLives(_lives - 1);
     }
 
-    private void OnFoodHitAnimal()
+    private void OnAnimalFull()
     {
         SetScore(_score + 1);
     }
 
     private void OnAnimalHitHome()
     {
+        Debug.Log("OnAnimalHitHome");
         SetLives(_lives - 1);
     }
 

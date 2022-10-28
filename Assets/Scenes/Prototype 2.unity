@@ -753,6 +753,10 @@ PrefabInstance:
       propertyPath: _minZ
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 953015259, guid: 3bd8a450fcb589542a7843ea7bda2ee6, type: 3}
+      propertyPath: _onAnimalFull
+      value: 
+      objectReference: {fileID: 11400000, guid: 5586395fd2edb00428b15336bd4a9b32, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bd8a450fcb589542a7843ea7bda2ee6, type: 3}
 --- !u!1 &425805626
@@ -1330,7 +1334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1096873362
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1572,12 +1576,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefabs:
-  - {fileID: 1694747949587549580, guid: bd195b0f9f54ddf4f995a03906b52728, type: 3}
+  - {fileID: 6722384357340617000, guid: c8205768a686a9b4eb2be5c843d971ef, type: 3}
   - {fileID: 3856768315168622683, guid: f3130a24264937648b304482b7e85a0b, type: 3}
   - {fileID: 6722384357340617000, guid: c8205768a686a9b4eb2be5c843d971ef, type: 3}
   - {fileID: 5754743270869240983, guid: 0620c3558802e9341bd74d2b54263788, type: 3}
   - {fileID: 2450446142202865428, guid: 780921fffb90574449418218d39eda96, type: 3}
-  _spawnInterval: 1.5
+  _spawnInterval: 3
   _spawnDelay: 2
   _minX: -17
   _maxX: 17
