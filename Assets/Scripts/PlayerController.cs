@@ -3,9 +3,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _speed = 10.0f;
-    [SerializeField] private float _xRange = 10.0f;
     [SerializeField] private GameObject _foodPrefab;
+    [Header("Movable Range")]
+    [SerializeField] private float _minX = -25.0f;
+    [SerializeField] private float _maxX = 25.0f;
+    [SerializeField] private float _minZ = -10.0f;
+    [SerializeField] private float _maxZ = 10.0f;
 
+    private float _verticalInput;
     private float _horizontalInput;
     private Transform _transform;
 
@@ -17,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         _horizontalInput = Input.GetAxis("Horizontal");
+        _verticalInput = Input.GetAxis("Vertical");
         if (Input.GetKeyDown(KeyCode.Space))
         {
             SpawnFood();
@@ -31,20 +37,16 @@ public class PlayerController : MonoBehaviour
 
     private void MovePlayer()
     {
-        _transform.Translate(Vector3.right * (_horizontalInput * Time.fixedDeltaTime * _speed));
+        var direction = Vector3.right * _horizontalInput + Vector3.forward * _verticalInput;
+        _transform.Translate(_speed * Time.fixedDeltaTime * direction);
     }
 
     private void KeepPlayerInRange()
     {
         var position = _transform.position;
-        if (position.x < -_xRange)
-        {
-            _transform.position = new Vector3(-_xRange, position.y, position.z);
-        }
-        else if (position.x > _xRange)
-        {
-            _transform.position = new Vector3(_xRange, position.y, position.z);
-        }
+        var x = Mathf.Max(Mathf.Min(position.x, _maxX), _minX);
+        var z = Mathf.Max(Mathf.Min(position.z, _maxZ), _minZ);
+        _transform.position = new Vector3(x, position.y, z);
     }
 
     private void SpawnFood()
